@@ -1,0 +1,32 @@
+FROM ros:humble-ros-base
+
+LABEL version="5"
+LABEL description="ROS2 delivery solution"
+LABEL maintainer="Bill Mania <bill@manialabs.us>"
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN echo "America/Los_Angeles" > /etc/timezone
+
+RUN echo "source /opt/ros/humble/setup.bash" >> /etc/profile
+
+SHELL ["/bin/bash", "--login", "-c"]
+RUN apt-get update \
+    && apt-get install -y apt-utils
+RUN apt-get install -y \
+    socat vim python3-crcmod python3-serial
+RUN apt-get install -y \
+    python3-colcon-ros \
+    ros-humble-rosbag2 \
+    ros-humble-diagnostic-updater
+
+WORKDIR /usr/src/ros2ws
+RUN mkdir src
+
+COPY src/delivery src/delivery/
+COPY src/usbl_msgs src/usbl_msgs/
+
+RUN colcon build \
+    && echo "source /usr/src/ros2ws/install/setup.bash" >> /etc/profile
+
+#CMD ["/bin/bash", "--login" "ros2 launch delivery delivery.launch.py"]
+CMD ["/bin/bash", "--login"]
