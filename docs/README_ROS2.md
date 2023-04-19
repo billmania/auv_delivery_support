@@ -32,3 +32,9 @@ source /opt/ros/humble/setup.bash
 source install/setup.bash
 ros2 launch delivery delivery.launch.py
 ```
+
+## Further reading for ROS stuff
+
+https://github.com/osrf/lrauv
+
+https://github.com/apl-ocean-engineering/marine_msgs/tree/main/acoustic_msgs
