@@ -1,0 +1,6 @@
+[submodule "ros2ws/src/usbl_msgs"]
+	path = ros2ws/src/usbl_msgs
+	url = https://github.com/billmania/usbl_msgs.git
+[submodule "ros2ws/src/delivery"]
+	path = ros2ws/src/delivery
+	url = https://github.com/billmania/delivery.git
