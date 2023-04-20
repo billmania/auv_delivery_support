@@ -4,3 +4,6 @@
 [submodule "ros2ws/src/delivery"]
 	path = ros2ws/src/delivery
 	url = https://github.com/billmania/delivery.git
+[submodule "ros2ws/src/delivery_simulation"]
+	path = ros2ws/src/delivery_simulation
+	url = https://github.com/billmania/delivery_simulation.git
