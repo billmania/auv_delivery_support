@@ -24,3 +24,6 @@ The seatrac X110 transceiver will be positioned near the sea floor.
    the hemisphere.
 10. The device is at least 1,000 meters from any other sonar device operating in the 
     24 kHz to 32 kHz band.
+11. There exists a way to visually inspect the transducer for marine growth
+    accumulation. There also exists a means to perform light cleaning of the
+    transducer, in place on the sea floor.
